@@ -1,0 +1,76 @@
+{
+  "Comment": "A description of my state machine",
+  "StartAt": "CopyObject",
+  "States": {
+    "CopyObject": {
+      "Type": "Task",
+      "Next": "GetObjectAttributes",
+      "Parameters": {
+        "Bucket": "intrinsic-highlights-test-mediabucketbcbb02ba-130ep1p1lvufe",
+        "CopySource": "intrinsic-highlights-test-mediabucketbcbb02ba-130ep1p1lvufe/test/test.mp4",
+        "Key": "uploads/test.mp4"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:s3:copyObject"
+    },
+    "GetObjectAttributes": {
+      "Type": "Task",
+      "Next": "Choice",
+      "Parameters": {
+        "Bucket": "intrinsic-highlights-test-mediabucketbcbb02ba-130ep1p1lvufe",
+        "Key": "converted/test.mp4",
+        "ObjectAttributes": [
+          "ETag"
+        ]
+      },
+      "Resource": "arn:aws:states:::aws-sdk:s3:getObjectAttributes",
+      "ResultPath": "$.getObjectResults",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.TaskFailed"
+          ],
+          "Next": "Choice"
+        }
+      ]
+    },
+    "Choice": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "Variable": "$.getObjectResults",
+          "IsPresent": true,
+          "Next": "DeleteObjects"
+        },
+        {
+          "Variable": "$.Error",
+          "StringEquals": "S3.NoSuchKeyException",
+          "Next": "Wait"
+        }
+      ]
+    },
+    "DeleteObjects": {
+      "Type": "Task",
+      "End": true,
+      "Parameters": {
+        "Bucket": "intrinsic-highlights-test-mediabucketbcbb02ba-130ep1p1lvufe",
+        "Delete": {
+          "Objects": [
+            {
+              "Key": "converted/test.mp4"
+            },
+            {
+              "Key": "uploads/test.mp4"
+            }
+          ]
+        }
+      },
+      "Resource": "arn:aws:states:::aws-sdk:s3:deleteObjects"
+    },
+    "Wait": {
+      "Type": "Wait",
+      "Seconds": 30,
+      "Next": "GetObjectAttributes"
+    }
+  },
+  "TimeoutSeconds": 60
+}

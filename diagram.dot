@@ -1,0 +1,398 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "intrinsic-highlights-test" {
+    subgraph "cluster-SubGraph.intrinsic-highlights-test" {
+      graph [
+        label = "intrinsic-highlights-test",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      "intrinsic-highlights-test/MediaBucket" [
+        label = " MediaBucket",
+        fontsize = 12,
+        image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.266,
+      ];
+      "intrinsic-highlights-test/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" [
+        label = " Custom \nCDKBucketDeployment86",
+        fontsize = 12,
+        image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.4819999999999998,
+      ];
+      "intrinsic-highlights-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role" [
+        label = " Role",
+        fontsize = 12,
+        image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.466,
+      ];
+      "intrinsic-highlights-test/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+        label = " ServiceRole",
+        fontsize = 12,
+        image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.466,
+      ];
+      subgraph "cluster-SubGraph.TranscodingTrigger" {
+        graph [
+          label = "TranscodingTrigger",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "intrinsic-highlights-test/TranscodingTrigger/MediaConvertRole" [
+          label = " MediaConvertRole",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "intrinsic-highlights-test/TranscodingTrigger/TriggerTranscodingFunction" [
+          label = "\nTriggerTranscodingFun",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "intrinsic-highlights-test/TranscodingTrigger/SourceBucketTrigger" [
+          label = " SourceBucketTrigger",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_Amazon-EventBridge_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+      }
+      subgraph "cluster-SubGraph.Tester" {
+        graph [
+          label = "Tester",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "intrinsic-highlights-test/Tester/TestingMachine" [
+          label = " TestingMachine",
+          fontsize = 12,
+          image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        subgraph "cluster-SubGraph.TestFileDeployment" {
+          graph [
+            label = "TestFileDeployment",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "intrinsic-highlights-test/Tester/TestFileDeployment/AwsCliLayer" [
+            label = " AwsCliLayer",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "intrinsic-highlights-test/Tester/TestFileDeployment/CustomResource" [
+            label = " CloudFormation\nCustomResource\nCustomResource",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.898,
+          ];
+        }
+        subgraph "cluster-SubGraph.Tests" {
+          graph [
+            label = "Tests",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "intrinsic-highlights-test/Tester/Tests/StateMachine" [
+            label = " StateMachine",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "intrinsic-highlights-test/Tester/Tests/OnEventHandler" [
+            label = " OnEventHandler",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "intrinsic-highlights-test/Tester/Tests/IsCompleteHandler" [
+            label = " IsCompleteHandler",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "intrinsic-highlights-test/Tester/Tests/Resource1132998" [
+            label = " CloudFormation\nCustomResource\nResource1132998",
+            fontsize = 12,
+            image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.898,
+          ];
+          subgraph "cluster-SubGraph.Provider" {
+            graph [
+              label = "Provider",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "intrinsic-highlights-test/Tester/Tests/Provider/framework-onEvent" [
+              label = " framework-onEvent",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "intrinsic-highlights-test/Tester/Tests/Provider/framework-isComplete" [
+              label = " framework-isComplete",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "intrinsic-highlights-test/Tester/Tests/Provider/framework-onTimeout" [
+              label = " framework-onTimeout",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "intrinsic-highlights-test/Tester/Tests/Provider/waiter-state-machine/Role" [
+              label = " Role",
+              fontsize = 12,
+              image = "/Users/matthewbonig/.nvm/versions/node/v16.14.2/lib/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+          }
+        }
+      }
+    }
+  }
+  "intrinsic-highlights-test/TranscodingTrigger/MediaConvertRole" -> "intrinsic-highlights-test/MediaBucket" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/TranscodingTrigger/TriggerTranscodingFunction" -> "intrinsic-highlights-test/TranscodingTrigger/MediaConvertRole" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/TranscodingTrigger/SourceBucketTrigger" -> "intrinsic-highlights-test/MediaBucket" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/TranscodingTrigger/SourceBucketTrigger" -> "intrinsic-highlights-test/TranscodingTrigger/TriggerTranscodingFunction" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/TestingMachine" -> "intrinsic-highlights-test/MediaBucket" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/StateMachine" -> "intrinsic-highlights-test/Tester/TestingMachine" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/OnEventHandler" -> "intrinsic-highlights-test/Tester/Tests/StateMachine" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/IsCompleteHandler" -> "intrinsic-highlights-test/Tester/Tests/StateMachine" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/framework-onEvent" -> "intrinsic-highlights-test/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/framework-onEvent" -> "intrinsic-highlights-test/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/framework-isComplete" -> "intrinsic-highlights-test/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/framework-isComplete" -> "intrinsic-highlights-test/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/framework-onTimeout" -> "intrinsic-highlights-test/Tester/Tests/OnEventHandler" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/framework-onTimeout" -> "intrinsic-highlights-test/Tester/Tests/IsCompleteHandler" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/waiter-state-machine/Role" -> "intrinsic-highlights-test/Tester/Tests/Provider/framework-isComplete" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Tester/Tests/Provider/waiter-state-machine/Role" -> "intrinsic-highlights-test/Tester/Tests/Provider/framework-onTimeout" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" -> "intrinsic-highlights-test/MediaBucket" [
+    dir = "both",
+  ];
+  "intrinsic-highlights-test/Custom__CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C" -> "intrinsic-highlights-test/Tester/TestFileDeployment/AwsCliLayer" [
+    dir = "both",
+  ];
+}
